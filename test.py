@@ -9,6 +9,8 @@ origins = [
     "*"
 ]
 
+app = FastAPI()
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
@@ -17,7 +19,6 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-app = FastAPI()
 class Item(BaseModel):
     title: str
     price: float
