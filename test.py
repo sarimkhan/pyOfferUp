@@ -1,6 +1,7 @@
 from pyOfferUp import fetch
 from fastapi import FastAPI
 from pydantic import BaseModel
+from fastapi.middleware.cors import CORSMiddleware
 import json
 
 origins = [
